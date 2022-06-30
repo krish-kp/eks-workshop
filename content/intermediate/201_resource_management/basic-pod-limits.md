@@ -38,6 +38,11 @@ kubectl run --limits=memory=1G,cpu=1 --image  hande007/stress-ng basic-limit-mem
 kubectl run --requests=memory=1G,cpu=1 --limits=memory=2G,cpu=1.8 --image  hande007/stress-ng basic-restricted-pod  --restart=Never --  --vm-keep  --vm-bytes 1g --timeout 600s --vm 2 --oomable --verbose 
 
 ```
+{{% notice info%}}
+Flag --requests has been deprecated, has no effect and will be removed in the future.<br/>
+Flag --limits has been deprecated, has no effect and will be removed in the future.<br/>
+You can safely ignore these warning messages as these flags will be removed in future release 
+{{% / notice %}}
 
 ### Verify Current Resource Usage
 
